@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension format="1.0">
+	<extension_code>combodo-workflow-graphical-view</extension_code>
+	<company>Combodo SARL</company>
+	<author><![CDATA[Anne-Catherine]]></author>
+	<label><![CDATA[Workflow graphical view]]></label>
+	<description><![CDATA[Show the object workflow when hovering the status in the details]]></description>
+	<version>1.1.0</version>
+	<modules type="array">
+		<module>
+			<id>combodo-workflow-graphical-view</id>
+			<version>tags/1.1.0</version>
+		</module>
+	</modules>
+	<release_date>2022-02-10</release_date>
+	<version_description><![CDATA[Add compatibility 3.0]]></version_description>
+	<itop_version_min>2.7.0</itop_version_min>
+	<status></status>
+	<mandatory>false</mandatory>
+	<more_info_url></more_info_url>
+</extension>

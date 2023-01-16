@@ -1,0 +1,32 @@
+2022-10-17 17:45:07 | Error   | 1     | Error: Missing query argument: expecting = this->caller_id, available = {}. | IssueLog |||
+2022-10-20 12:03:16 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:16 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:17 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:17 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:17 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:18 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:18 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:18 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:18 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:19 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:19 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:19 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:20 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-20 12:03:20 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-28 15:49:49 | Error   | 1     | Incident: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-28 15:49:49 | Error   | 1     | Incident: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-28 15:49:55 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-28 15:49:55 | Error   | 1     | UserRequest: Transition ev_timeout is not allowed in escalated_tto | IssueLog |||
+2022-10-28 15:50:30 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2022-10-28_15_50.tar.gz' | IssueLog |||
+2022-10-28 15:50:30 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-1005926530' | IssueLog |||
+2022-10-28 15:50:30 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2022-10-28 15:50:30 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2022-10-28 15:50:32 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2022-10-28 15:50:32 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-WVtdgu" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-1005926530/itop-dump.sql' 'itop_db'  | IssueLog |||
+2022-10-28 15:50:48 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2022-10-28 15:50:48 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-1005926530/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-1005926530/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-1005926530/itop-dump.sql',
+)' | IssueLog |||
+2022-10-28 15:50:48 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-1005926530' | IssueLog |||

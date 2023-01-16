@@ -1,0 +1,132 @@
+2023-01-03 10:33:04 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-03_10_33.tar.gz' | IssueLog |||
+2023-01-03 10:33:04 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-1632414725' | IssueLog |||
+2023-01-03 10:33:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-03 10:33:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-03 10:33:04 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-03 10:33:04 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-fv5s9q" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-1632414725/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-03 10:33:06 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-03 10:33:06 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-1632414725/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-1632414725/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-1632414725/itop-dump.sql',
+)' | IssueLog |||
+2023-01-03 10:33:06 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-1632414725' | IssueLog |||
+2023-01-04 10:33:04 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-04_10_33.tar.gz' | IssueLog |||
+2023-01-04 10:33:04 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-160321049' | IssueLog |||
+2023-01-04 10:33:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-04 10:33:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-04 10:33:04 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-04 10:33:04 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-tVSm5u" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-160321049/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-04 10:33:06 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-04 10:33:06 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-160321049/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-160321049/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-160321049/itop-dump.sql',
+)' | IssueLog |||
+2023-01-04 10:33:06 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-160321049' | IssueLog |||
+2023-01-04 20:23:03 | Error   | 1     | MySQL server has gone away: query = START TRANSACTION, mysql_errno = 2006, mysql_error = MySQL server has gone away | IssueLog |||
+2023-01-04 20:23:03 | Error   | 1     | No Transaction ROLLBACK From /var/www/html/itop-web/core/dbobject.class.php(3314): DBObject->DBUpdate() | cmdbsource |||
+2023-01-05 10:33:24 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-05_10_33.tar.gz' | IssueLog |||
+2023-01-05 10:33:24 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-320612474' | IssueLog |||
+2023-01-05 10:33:24 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-05 10:33:24 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-05 10:33:34 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-05 10:33:34 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-r2uGsg" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-320612474/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-05 10:34:11 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-05 10:34:11 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-320612474/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-320612474/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-320612474/itop-dump.sql',
+)' | IssueLog |||
+2023-01-05 10:34:11 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-320612474' | IssueLog |||
+2023-01-06 10:33:04 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-06_10_33.tar.gz' | IssueLog |||
+2023-01-06 10:33:04 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-2030981958' | IssueLog |||
+2023-01-06 10:33:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-06 10:33:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-06 10:33:05 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-06 10:33:05 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-c9EHJ0" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-2030981958/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-06 10:33:06 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-06 10:33:06 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-2030981958/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-2030981958/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-2030981958/itop-dump.sql',
+)' | IssueLog |||
+2023-01-06 10:33:07 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-2030981958' | IssueLog |||
+2023-01-07 10:11:07 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-07_10_11.tar.gz' | IssueLog |||
+2023-01-07 10:11:07 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-953406946' | IssueLog |||
+2023-01-07 10:11:07 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-07 10:11:07 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-07 10:11:07 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-07 10:11:07 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-VkTRgK" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-953406946/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-07 10:11:09 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-07 10:11:09 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-953406946/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-953406946/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-953406946/itop-dump.sql',
+)' | IssueLog |||
+2023-01-07 10:11:09 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-953406946' | IssueLog |||
+2023-01-10 13:15:03 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-10_13_15.tar.gz' | IssueLog |||
+2023-01-10 13:15:03 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-1963360029' | IssueLog |||
+2023-01-10 13:15:03 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-10 13:15:03 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-10 13:15:04 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-10 13:15:04 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-BbZM5X" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-1963360029/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-10 13:15:10 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-10 13:15:10 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-1963360029/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-1963360029/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-1963360029/itop-dump.sql',
+)' | IssueLog |||
+2023-01-10 13:15:10 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-1963360029' | IssueLog |||
+2023-01-11 11:20:04 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-11_11_20.tar.gz' | IssueLog |||
+2023-01-11 11:20:04 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-313902882' | IssueLog |||
+2023-01-11 11:20:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-11 11:20:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-11 11:20:05 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-11 11:20:05 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-V75obj" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-313902882/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-11 11:20:06 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-11 11:20:06 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-313902882/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-313902882/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-313902882/itop-dump.sql',
+)' | IssueLog |||
+2023-01-11 11:20:06 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-313902882' | IssueLog |||
+2023-01-12 12:05:04 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-12_12_05.tar.gz' | IssueLog |||
+2023-01-12 12:05:04 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-682383087' | IssueLog |||
+2023-01-12 12:05:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-12 12:05:04 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-12 12:05:04 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-12 12:05:04 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-3AYmzr" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-682383087/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-12 12:05:06 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-12 12:05:06 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-682383087/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-682383087/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-682383087/itop-dump.sql',
+)' | IssueLog |||
+2023-01-12 12:05:06 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-682383087' | IssueLog |||
+2023-01-13 12:00:04 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-13_12_00.tar.gz' | IssueLog |||
+2023-01-13 12:00:05 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-778780481' | IssueLog |||
+2023-01-13 12:00:05 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-13 12:00:05 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-13 12:00:06 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-13 12:00:06 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-Ni1m9W" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-778780481/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-13 12:00:08 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-13 12:00:08 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-778780481/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-778780481/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-778780481/itop-dump.sql',
+)' | IssueLog |||
+2023-01-13 12:00:08 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-778780481' | IssueLog |||
+2023-01-14 13:15:03 | Info    | 1     | Creating backup: '/var/www/html/itop-web/data/backups/auto/itop_db-2023-01-14_13_15.tar.gz' | IssueLog |||
+2023-01-14 13:15:03 | Info    | 1     | backup: creating tmp dir '/var/www/html/itop-web/data/tmp-backup-1445405928' | IssueLog |||
+2023-01-14 13:15:03 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/conf/production/config-itop.php' | IssueLog |||
+2023-01-14 13:15:03 | Info    | 1     | backup: adding resource '/var/www/html/itop-web/data/production-modules/' | IssueLog |||
+2023-01-14 13:15:04 | Info    | 1     | Starting backup of localhost/itop_db(suffix:'') | IssueLog |||
+2023-01-14 13:15:04 | Info    | 1     | backup: generate data file with command: mysqldump --defaults-extra-file="/tmp/itop-mysqldump-9KsMuA" --opt --skip-lock-tables --default-character-set=utf8mb4 --add-drop-database --single-transaction --host='localhost'  --port='3306' --user=xxxxx  --result-file='/var/www/html/itop-web/data/tmp-backup-1445405928/itop-dump.sql' 'itop_db'  | IssueLog |||
+2023-01-14 13:15:06 | Info    | 1     | mysqldump said: mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces | IssueLog |||
+2023-01-14 13:15:06 | Info    | 1     | backup: adding to archive files 'array (
+  0 => '/var/www/html/itop-web/data/tmp-backup-1445405928/config-itop.php',
+  1 => '/var/www/html/itop-web/data/tmp-backup-1445405928/production-modules',
+  2 => '/var/www/html/itop-web/data/tmp-backup-1445405928/itop-dump.sql',
+)' | IssueLog |||
+2023-01-14 13:15:06 | Info    | 1     | backup: removing tmp folder '/var/www/html/itop-web/data/tmp-backup-1445405928' | IssueLog |||

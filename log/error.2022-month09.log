@@ -1,0 +1,675 @@
+2022-08-03 09:08:03 | Error   | 6     | Failed to issue SQL query: query = SELECT COUNT(*) AS COUNT FROM (SELECT
+ DISTINCT COALESCE(`Change`.`id`, 0) AS idCount0, COALESCE(`Change_Ticket`.`id`, 0) AS idCount1 
+ FROM 
+   `ticket_change` AS `Change`
+   INNER JOIN 
+      `ticket` AS `Change_Ticket`
+    ON `Change`.`id` = `Change_Ticket`.`id`
+ WHERE (((`Change_Ticket`.`agent_id` = 21) AND (`Change`.`status` NOT IN ('closed'))) AND (`Change_Ticket`.`org_id` IN ('4', '6', '7', '2', '1', '2', '3', '4', '5', '6', '7', '3', '5'))) LIMIT 0, 101) AS _alderaan_ WHERE idCount0+ idCount1>0, mysql_errno = 1146, mysql_error = Table 'itop_db.ticket_change' doesn't exist
+Debug trace:
+#0 /var/www/html/itop-web/core/cmdbsource.class.inc.php(574): CMDBSource::DBQuery()
+#1 /var/www/html/itop-web/core/dbobjectset.class.php(915): CMDBSource::Query()
+#2 /var/www/html/itop-web/application/menunode.class.inc.php(724): DBObjectSet->CountWithLimit()
+#3 /var/www/html/itop-web/application/menunode.class.inc.php(1167): MenuNode->GetEntriesCountFromOQL()
+#4 /var/www/html/itop-web/application/menunode.class.inc.php(235): OQLMenuNode->GetEntriesCount()
+#5 /var/www/html/itop-web/application/menunode.class.inc.php(237): ApplicationMenu::GetSubMenusCount()
+#6 /var/www/html/itop-web/application/menunode.class.inc.php(215): ApplicationMenu::GetSubMenusCount()
+#7 /var/www/html/itop-web/sources/Controller/AjaxRenderController.php(231): ApplicationMenu::GetMenusCount()
+#8 /var/www/html/itop-web/pages/ajax.render.php(2668): Combodo\iTop\Controller\AjaxRenderController->GetMenusCount()
+#9 {main} | IssueLog |||
+2022-08-04 16:08:11 | Error   | 1     | UI.php 'bulk_delete_confirmed' : invalid transaction_id ! data: user='admin', class='SLA' | IssueLog |||
+2022-08-04 16:08:11 | Error   | 1     | Error: Error: objects have already been deleted!. | IssueLog |||
+2022-08-04 16:08:15 | Error   | 1     | Error: No result for the single row query: 'SELECT
+ DISTINCT `SLA`.`id` AS `SLAid`,
+ `SLA`.`name` AS `SLAname`,
+ `SLA`.`description` AS `SLAdescription`,
+ `SLA`.`org_id` AS `SLAorg_id`,
+ `Organization_org_id`.`name` AS `SLAorganization_name`,
+ CAST(CONCAT(COALESCE(`SLA`.`name`, '')) AS CHAR) AS `SLAfriendlyname`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, '')) AS CHAR) AS `SLAorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = 'inactive'), 0) AS `SLAorg_id_obsolescence_flag`
+ FROM 
+   `sla` AS `SLA`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `SLA`.`org_id` = `Organization_org_id`.`id`
+ WHERE (`SLA`.`id` = '2')
+  '. | IssueLog |||
+2022-08-08 12:44:00 | Error   | 6     | UI.php 'bulk_delete_confirmed' : invalid transaction_id ! data: user='kiran', class='SLA' | IssueLog |||
+2022-08-08 12:44:00 | Error   | 6     | Error: Error: objects have already been deleted!. | IssueLog |||
+2022-08-08 12:44:07 | Error   | 6     | UI.php 'bulk_delete_confirmed' : invalid transaction_id ! data: user='kiran', class='SLA' | IssueLog |||
+2022-08-08 12:44:07 | Error   | 6     | Error: Error: objects have already been deleted!. | IssueLog |||
+2022-08-08 13:07:05 | Error   | 1     | UI.php 'bulk_delete_confirmed' : invalid transaction_id ! data: user='admin', class='ProviderContract' | IssueLog |||
+2022-08-08 13:07:05 | Error   | 1     | Error: Error: objects have already been deleted!. | IssueLog |||
+2022-08-08 13:07:12 | Error   | 1     | Error: No result for the single row query: 'SELECT
+ DISTINCT `ProviderContract`.`id` AS `ProviderContractid`,
+ `ProviderContract_Contract`.`name` AS `ProviderContractname`,
+ `ProviderContract_Contract`.`org_id` AS `ProviderContractorg_id`,
+ `Organization_org_id`.`name` AS `ProviderContractorganization_name`,
+ `ProviderContract_Contract`.`description` AS `ProviderContractdescription`,
+ `ProviderContract_Contract`.`start_date` AS `ProviderContractstart_date`,
+ `ProviderContract_Contract`.`end_date` AS `ProviderContractend_date`,
+ `ProviderContract_Contract`.`cost` AS `ProviderContractcost`,
+ `ProviderContract_Contract`.`cost_currency` AS `ProviderContractcost_currency`,
+ `ProviderContract_Contract`.`contracttype_id` AS `ProviderContractcontracttype_id`,
+ `ContractType_contracttype_id_Typology`.`name` AS `ProviderContractcontracttype_name`,
+ `ProviderContract_Contract`.`billing_frequency` AS `ProviderContractbilling_frequency`,
+ `ProviderContract_Contract`.`cost_unit` AS `ProviderContractcost_unit`,
+ `ProviderContract_Contract`.`provider_id` AS `ProviderContractprovider_id`,
+ `Organization_provider_id`.`name` AS `ProviderContractprovider_name`,
+ `ProviderContract_Contract`.`status` AS `ProviderContractstatus`,
+ `ProviderContract`.`sla` AS `ProviderContractsla`,
+ `ProviderContract`.`coverage` AS `ProviderContractcoverage`,
+ `ProviderContract_Contract`.`finalclass` AS `ProviderContractfinalclass`,
+ CAST(CONCAT(COALESCE(`ProviderContract_Contract`.`name`, '')) AS CHAR) AS `ProviderContractfriendlyname`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, '')) AS CHAR) AS `ProviderContractorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = 'inactive'), 0) AS `ProviderContractorg_id_obsolescence_flag`,
+ CAST(CONCAT(COALESCE(`ContractType_contracttype_id_Typology`.`name`, '')) AS CHAR) AS `ProviderContractcontracttype_id_friendlyname`,
+ CAST(CONCAT(COALESCE(`Organization_provider_id`.`name`, '')) AS CHAR) AS `ProviderContractprovider_id_friendlyname`,
+ COALESCE((`Organization_provider_id`.`status` = 'inactive'), 0) AS `ProviderContractprovider_id_obsolescence_flag`
+ FROM 
+   `providercontract` AS `ProviderContract`
+   INNER JOIN (
+      `contract` AS `ProviderContract_Contract` 
+      INNER JOIN 
+         `organization` AS `Organization_org_id`
+       ON `ProviderContract_Contract`.`org_id` = `Organization_org_id`.`id`
+      LEFT JOIN 
+         `typology` AS `ContractType_contracttype_id_Typology`
+       ON `ProviderContract_Contract`.`contracttype_id` = `ContractType_contracttype_id_Typology`.`id`
+      INNER JOIN 
+         `organization` AS `Organization_provider_id`
+       ON `ProviderContract_Contract`.`provider_id` = `Organization_provider_id`.`id`
+   ) ON `ProviderContract`.`id` = `ProviderContract_Contract`.`id`
+ WHERE ((`ProviderContract`.`id` = '7') AND COALESCE((`ContractType_contracttype_id_Typology`.`finalclass` IN ('ContractType')), 1))
+  '. | IssueLog |||
+2022-08-10 16:13:50 | Error   | 1     | Unknown attribute Service from class Service | IssueLog |||
+2022-08-10 16:13:54 | Error   | 1     | Unknown attribute Service from class Service | IssueLog |||
+2022-08-10 16:14:02 | Error   | 1     | Unknown attribute  from class Service | IssueLog |||
+2022-08-10 16:16:05 | Error   | 1     | Unknown attribute  from class Service | IssueLog |||
+2022-08-11 10:29:28 | Error   | 1     | Unknown attribute  from class Person | IssueLog |||
+2022-08-11 10:29:31 | Error   | 1     | Unknown attribute  from class Person | IssueLog |||
+2022-08-11 10:29:33 | Error   | 1     | Unknown attribute  from class Service | IssueLog |||
+2022-08-11 11:38:10 | Error   | 1     | Error: Unable to write in the cache directory (/var/www/html/itop-web/data/cache-production/twig/templates/c4).. | IssueLog |||
+2022-08-11 11:38:13 | Error   | 1     | Error: Unable to write in the cache directory (/var/www/html/itop-web/data/cache-production/twig/templates/c4).. | IssueLog |||
+2022-08-24 14:24:12 | Error   | 1     | Unable to write in the cache directory (/var/www/html/itop-web/data/cache-production/twig/templates/ac).
+Debug trace:
+#0 /var/www/html/itop-web/lib/twig/twig/src/Environment.php(487): Twig\Cache\FilesystemCache->write()
+#1 /var/www/html/itop-web/lib/twig/twig/src/Environment.php(445): Twig\Environment->loadClass()
+#2 /var/www/html/itop-web/lib/twig/twig/src/Environment.php(423): Twig\Environment->loadTemplate()
+#3 /var/www/html/itop-web/lib/twig/twig/src/Environment.php(384): Twig\Environment->load()
+#4 /var/www/html/itop-web/sources/application/TwigBase/Twig/TwigHelper.php(161): Twig\Environment->render()
+#5 /var/www/html/itop-web/sources/Renderer/BlockRenderer.php(152): Combodo\iTop\Application\TwigBase\Twig\TwigHelper::RenderTemplate()
+#6 /var/www/html/itop-web/sources/Renderer/Console/ConsoleBlockRenderer.php(98): Combodo\iTop\Renderer\BlockRenderer->RenderJsInline()
+#7 /var/www/html/itop-web/sources/Renderer/Console/ConsoleBlockRenderer.php(102): Combodo\iTop\Renderer\Console\ConsoleBlockRenderer::AddCssJsTemplatesToPageRecursively()
+#8 /var/www/html/itop-web/sources/Renderer/Console/ConsoleBlockRenderer.php(90): Combodo\iTop\Renderer\Console\ConsoleBlockRenderer::AddCssJsTemplatesToPageRecursively()
+#9 /var/www/html/itop-web/sources/application/WebPage/AjaxPage.php(194): Combodo\iTop\Renderer\Console\ConsoleBlockRenderer::AddCssJsToPage()
+#10 /var/www/html/itop-web/pages/ajax.render.php(2675): AjaxPage->output()
+#11 {main} | IssueLog |||
+2022-08-24 14:25:01 | Error   | 1     | Unable to write in the cache directory (/var/www/html/itop-web/data/cache-production/twig/templates/ac).
+Debug trace:
+#0 /var/www/html/itop-web/lib/twig/twig/src/Environment.php(487): Twig\Cache\FilesystemCache->write()
+#1 /var/www/html/itop-web/lib/twig/twig/src/Environment.php(445): Twig\Environment->loadClass()
+#2 /var/www/html/itop-web/lib/twig/twig/src/Environment.php(423): Twig\Environment->loadTemplate()
+#3 /var/www/html/itop-web/lib/twig/twig/src/Environment.php(384): Twig\Environment->load()
+#4 /var/www/html/itop-web/sources/application/TwigBase/Twig/TwigHelper.php(161): Twig\Environment->render()
+#5 /var/www/html/itop-web/sources/Renderer/BlockRenderer.php(152): Combodo\iTop\Application\TwigBase\Twig\TwigHelper::RenderTemplate()
+#6 /var/www/html/itop-web/sources/Renderer/Console/ConsoleBlockRenderer.php(98): Combodo\iTop\Renderer\BlockRenderer->RenderJsInline()
+#7 /var/www/html/itop-web/sources/Renderer/Console/ConsoleBlockRenderer.php(102): Combodo\iTop\Renderer\Console\ConsoleBlockRenderer::AddCssJsTemplatesToPageRecursively()
+#8 /var/www/html/itop-web/sources/Renderer/Console/ConsoleBlockRenderer.php(90): Combodo\iTop\Renderer\Console\ConsoleBlockRenderer::AddCssJsTemplatesToPageRecursively()
+#9 /var/www/html/itop-web/sources/application/WebPage/AjaxPage.php(194): Combodo\iTop\Renderer\Console\ConsoleBlockRenderer::AddCssJsToPage()
+#10 /var/www/html/itop-web/pages/ajax.render.php(2675): AjaxPage->output()
+#11 {main} | IssueLog |||
+2022-09-02 12:55:44 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-02 12:56:10 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-02 12:56:21 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-02 12:59:46 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-02 13:00:10 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-02 13:00:12 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-02 14:20:56 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:07:09 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:10:03 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:10:06 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:10:10 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:10:11 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:10:11 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:10:11 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:10:24 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:11:14 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:11:24 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:11:40 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:11:48 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:11:49 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:11:49 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:11:49 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:11:52 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:12:44 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:12:47 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:12:47 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:12:48 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:12:48 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:12:58 | Error   |       | Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory
+Debug trace:
+#0 /var/www/html/itop-web/core/cmdbsource.class.inc.php(135): CMDBSource::GetMysqliInstance()
+#1 /var/www/html/itop-web/core/cmdbsource.class.inc.php(107): CMDBSource::Init()
+#2 /var/www/html/itop-web/core/metamodel.class.php(6714): CMDBSource::InitFromConfig()
+#3 /var/www/html/itop-web/core/metamodel.class.php(6529): MetaModel::LoadConfig()
+#4 /var/www/html/itop-web/application/startup.inc.php(101): MetaModel::Startup()
+#5 /var/www/html/itop-web/pages/ajax.document.php(34): require_once('/var/www/html/i...')
+#6 {main} | IssueLog |||
+2022-09-07 12:13:19 | Error   |       | Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory
+Debug trace:
+#0 /var/www/html/itop-web/core/cmdbsource.class.inc.php(135): CMDBSource::GetMysqliInstance()
+#1 /var/www/html/itop-web/core/cmdbsource.class.inc.php(107): CMDBSource::Init()
+#2 /var/www/html/itop-web/core/metamodel.class.php(6714): CMDBSource::InitFromConfig()
+#3 /var/www/html/itop-web/core/metamodel.class.php(6529): MetaModel::LoadConfig()
+#4 /var/www/html/itop-web/application/startup.inc.php(101): MetaModel::Startup()
+#5 /var/www/html/itop-web/pages/ajax.document.php(34): require_once('/var/www/html/i...')
+#6 {main} | IssueLog |||
+2022-09-07 12:14:11 | Error   |       | Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory
+Debug trace:
+#0 /var/www/html/itop-web/core/cmdbsource.class.inc.php(135): CMDBSource::GetMysqliInstance()
+#1 /var/www/html/itop-web/core/cmdbsource.class.inc.php(107): CMDBSource::Init()
+#2 /var/www/html/itop-web/core/metamodel.class.php(6714): CMDBSource::InitFromConfig()
+#3 /var/www/html/itop-web/core/metamodel.class.php(6529): MetaModel::LoadConfig()
+#4 /var/www/html/itop-web/application/startup.inc.php(101): MetaModel::Startup()
+#5 /var/www/html/itop-web/pages/ajax.document.php(34): require_once('/var/www/html/i...')
+#6 {main} | IssueLog |||
+2022-09-07 12:14:17 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:14:27 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:14:59 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:11 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:44 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:46 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:46 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:46 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:46 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:46 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:46 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-07 12:15:54 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 14:34:08 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 14:42:18 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 14:42:19 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:09:36 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:09:48 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:11:06 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:14:17 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:14:43 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:14:59 | Error   |       | Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory
+Debug trace:
+#0 /var/www/html/itop-web/core/cmdbsource.class.inc.php(135): CMDBSource::GetMysqliInstance()
+#1 /var/www/html/itop-web/core/cmdbsource.class.inc.php(107): CMDBSource::Init()
+#2 /var/www/html/itop-web/core/metamodel.class.php(6714): CMDBSource::InitFromConfig()
+#3 /var/www/html/itop-web/core/metamodel.class.php(6529): MetaModel::LoadConfig()
+#4 /var/www/html/itop-web/application/startup.inc.php(101): MetaModel::Startup()
+#5 /var/www/html/itop-web/pages/ajax.document.php(34): require_once('/var/www/html/i...')
+#6 {main} | IssueLog |||
+2022-09-12 15:15:01 | Error   |       | Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory
+Debug trace:
+#0 /var/www/html/itop-web/core/cmdbsource.class.inc.php(135): CMDBSource::GetMysqliInstance()
+#1 /var/www/html/itop-web/core/cmdbsource.class.inc.php(107): CMDBSource::Init()
+#2 /var/www/html/itop-web/core/metamodel.class.php(6714): CMDBSource::InitFromConfig()
+#3 /var/www/html/itop-web/core/metamodel.class.php(6529): MetaModel::LoadConfig()
+#4 /var/www/html/itop-web/application/startup.inc.php(101): MetaModel::Startup()
+#5 /var/www/html/itop-web/pages/ajax.document.php(34): require_once('/var/www/html/i...')
+#6 {main} | IssueLog |||
+2022-09-12 15:18:16 | Error   |       | Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory
+Debug trace:
+#0 /var/www/html/itop-web/core/cmdbsource.class.inc.php(135): CMDBSource::GetMysqliInstance()
+#1 /var/www/html/itop-web/core/cmdbsource.class.inc.php(107): CMDBSource::Init()
+#2 /var/www/html/itop-web/core/metamodel.class.php(6714): CMDBSource::InitFromConfig()
+#3 /var/www/html/itop-web/core/metamodel.class.php(6529): MetaModel::LoadConfig()
+#4 /var/www/html/itop-web/application/startup.inc.php(101): MetaModel::Startup()
+#5 /var/www/html/itop-web/pages/ajax.document.php(34): require_once('/var/www/html/i...')
+#6 {main} | IssueLog |||
+2022-09-12 15:18:20 | Error   |       | Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory
+Debug trace:
+#0 /var/www/html/itop-web/core/cmdbsource.class.inc.php(135): CMDBSource::GetMysqliInstance()
+#1 /var/www/html/itop-web/core/cmdbsource.class.inc.php(107): CMDBSource::Init()
+#2 /var/www/html/itop-web/core/metamodel.class.php(6714): CMDBSource::InitFromConfig()
+#3 /var/www/html/itop-web/core/metamodel.class.php(6529): MetaModel::LoadConfig()
+#4 /var/www/html/itop-web/application/startup.inc.php(101): MetaModel::Startup()
+#5 /var/www/html/itop-web/pages/ajax.document.php(34): require_once('/var/www/html/i...')
+#6 {main} | IssueLog |||
+2022-09-12 15:29:58 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:30:53 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:12 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:41 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:41 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:41 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:42 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:42 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:43 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:44 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:44 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:31:45 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:35:17 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:36:34 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 15:57:56 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 16:53:05 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-12 18:06:15 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-19 13:10:04 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-19 13:10:16 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-19 13:16:43 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-19 13:16:49 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)
+2022-09-26 15:43:10 | Error   |       | Uncaught MySQLException: Could not connect to the DB server: host = localhost, user = itopnew, mysql_errno = 2002, mysql_error = No such file or directory in /var/www/html/itop-web/core/cmdbsource.class.inc.php:185
+ | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/itop-web/core/cmdbsource.class.inc.php',
+  'line' => 185,
+)

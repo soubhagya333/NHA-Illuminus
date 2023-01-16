@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <module_designs>
+    <module_design id="itop-portal" xsi:type="portal">
+      <bricks>
+		  <brick id="quick-new-user-request" xsi:type="Combodo\iTop\Portal\Brick\CreateBrick" _delta="define">
+			<active>true</active>
+			<rank>
+				<default>70</default>
+			</rank>
+			<width>4</width>
+			<modal>true</modal>
+			<title>
+				<default>Brick:Portal:QuickNewUserRequest:Title</default>
+			</title>
+			<visible>
+				<home>false</home>
+			</visible>
+			<decoration_class>
+				<default>fa fa-bolt fa-2x fa-fw</default>
+			</decoration_class>
+			<!-- Class that will be create created with the form -->
+			<class>UserRequest</class>
+			<rules>
+				<rule id="contact-to-userrequest"/>
+			</rules>
+		</brick>
+      </bricks>
+    </module_design>
+  </module_designs>
+</itop_design>

@@ -1,0 +1,98 @@
+2022-05-18 08:12:04 | Warning | 1     | Email sending failed: Some recipients were invalid, aFailedRecipients contains: bakkesh@exzatechconsulting.com | IssueLog |||
+2022-05-18 09:12:24 | Warning | 1     | Email sending failed: Some recipients were invalid, aFailedRecipients contains: bakkesh@exzatechconsulting.com | IssueLog |||
+2022-05-18 11:58:24 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:46 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:48 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:50 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:51 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:51 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:51 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:51 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:51 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:35:52 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-18 14:36:01 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-05-19 07:58:15 | Error   | 1     | Error: Unexpected input at line 1: ;. | IssueLog |||
+2022-05-19 13:39:26 | Error   | 5     | UI.php 'bulk_delete_confirmed' : invalid transaction_id ! data: user='madhu', class='Team' | IssueLog |||
+2022-05-19 13:39:26 | Error   | 5     | Error: Error: objects have already been deleted!. | IssueLog |||
+2022-05-19 13:39:33 | Error   | 5     | UI.php 'bulk_delete_confirmed' : invalid transaction_id ! data: user='madhu', class='Team' | IssueLog |||
+2022-05-19 13:39:33 | Error   | 5     | Error: Error: objects have already been deleted!. | IssueLog |||
+2022-05-23 14:01:54 | Error   | 1     | DOMDocument::loadXML(): Empty string supplied as input
+Debug trace:
+#0 [internal function]: Dashboard::ErrorHandler()
+#1 /var/www/html/web/application/dashboard.class.inc.php(69): DOMDocument->loadXML()
+#2 /var/www/html/web/application/dashboard.class.inc.php(891): Dashboard->FromXml()
+#3 /var/www/html/web/pages/ajax.render.php(936): RuntimeDashboard::GetDashboard()
+#4 {main} | IssueLog |||
+2022-05-23 14:02:00 | Error   | 1     | DOMDocument::loadXML(): Empty string supplied as input
+Debug trace:
+#0 [internal function]: Dashboard::ErrorHandler()
+#1 /var/www/html/web/application/dashboard.class.inc.php(69): DOMDocument->loadXML()
+#2 /var/www/html/web/application/dashboard.class.inc.php(891): Dashboard->FromXml()
+#3 /var/www/html/web/pages/ajax.render.php(936): RuntimeDashboard::GetDashboard()
+#4 {main} | IssueLog |||

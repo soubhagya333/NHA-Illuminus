@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
+	<module_parameters>
+		<parameters id="combodo-workflow-graphical-view" _delta="define">
+			<hide_internal_stimuli type="boolean">false</hide_internal_stimuli>
+			<stimuli_to_hide type="hash">
+				<UserRequest>ev_autoresolve</UserRequest>
+			</stimuli_to_hide>
+			<disabled_classes type="array"></disabled_classes>
+			<disabled_portals type="array"></disabled_portals>
+			<show_button_css_classes type="string">fas fa-map-marked-alt</show_button_css_classes>
+		</parameters>
+	</module_parameters>
+</itop_design>

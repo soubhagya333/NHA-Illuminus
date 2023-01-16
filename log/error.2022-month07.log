@@ -1,0 +1,117 @@
+2022-07-11 09:40:54 | Error   | 2     | Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/b6). | RuntimeException |||
+array (
+  'exception class' => 'RuntimeException',
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/user?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-11 09:40:54 | Error   | 2     | Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/d6). | RuntimeException |||
+array (
+  'exception class' => 'RuntimeException',
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/user?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-11 09:40:54 | Error   | 2     | Uncaught RuntimeException: Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/d6). in /var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php:57
+Stack trace:
+#0 /var/www/html/web/lib/twig/twig/src/Environment.php(487): Twig\Cache\FilesystemCache->write()
+#1 /var/www/html/web/lib/twig/twig/src/Environment.php(445): Twig\Environment->loadClass()
+#2 /var/www/html/web/lib/twig/twig/src/Environment.php(423): Twig\Environment->loadTemplate()
+#3 /var/www/html/web/lib/twig/twig/src/Environment.php(384): Twig\Environment->load()
+#4 /var/www/html/web/env-production/itop-portal-base/portal/src/EventListener/ExceptionListener.php(116): Twig\Environment->render()
+#5 /var/www/html/web/lib/symfony/event-dispatcher/EventDispatcher.php(214): Combodo\iTop\Portal\EventListener\ExceptionListener->onKernelException()
+#6 /var/www/html/web/lib/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch()
+#7 /var/www/ht | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+)
+2022-07-11 09:41:13 | Error   | 2     | Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/b6). | RuntimeException |||
+array (
+  'exception class' => 'RuntimeException',
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/user?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-11 09:41:13 | Error   | 2     | Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/d6). | RuntimeException |||
+array (
+  'exception class' => 'RuntimeException',
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/user?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-11 09:41:13 | Error   | 2     | Uncaught RuntimeException: Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/d6). in /var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php:57
+Stack trace:
+#0 /var/www/html/web/lib/twig/twig/src/Environment.php(487): Twig\Cache\FilesystemCache->write()
+#1 /var/www/html/web/lib/twig/twig/src/Environment.php(445): Twig\Environment->loadClass()
+#2 /var/www/html/web/lib/twig/twig/src/Environment.php(423): Twig\Environment->loadTemplate()
+#3 /var/www/html/web/lib/twig/twig/src/Environment.php(384): Twig\Environment->load()
+#4 /var/www/html/web/env-production/itop-portal-base/portal/src/EventListener/ExceptionListener.php(116): Twig\Environment->render()
+#5 /var/www/html/web/lib/symfony/event-dispatcher/EventDispatcher.php(214): Combodo\iTop\Portal\EventListener\ExceptionListener->onKernelException()
+#6 /var/www/html/web/lib/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch()
+#7 /var/www/ht | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+)
+2022-07-11 09:41:23 | Error   | 2     | Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/b6). | RuntimeException |||
+array (
+  'exception class' => 'RuntimeException',
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/user?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-11 09:41:23 | Error   | 2     | Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/d6). | RuntimeException |||
+array (
+  'exception class' => 'RuntimeException',
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+  'uri' => 'http://localhost:8080/web/pages/exec.php/user?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-11 09:41:23 | Error   | 2     | Uncaught RuntimeException: Unable to create the cache directory (/var/www/html/web/data/cache-production/portals/itop-portal-prod/twig/d6). in /var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php:57
+Stack trace:
+#0 /var/www/html/web/lib/twig/twig/src/Environment.php(487): Twig\Cache\FilesystemCache->write()
+#1 /var/www/html/web/lib/twig/twig/src/Environment.php(445): Twig\Environment->loadClass()
+#2 /var/www/html/web/lib/twig/twig/src/Environment.php(423): Twig\Environment->loadTemplate()
+#3 /var/www/html/web/lib/twig/twig/src/Environment.php(384): Twig\Environment->load()
+#4 /var/www/html/web/env-production/itop-portal-base/portal/src/EventListener/ExceptionListener.php(116): Twig\Environment->render()
+#5 /var/www/html/web/lib/symfony/event-dispatcher/EventDispatcher.php(214): Combodo\iTop\Portal\EventListener\ExceptionListener->onKernelException()
+#6 /var/www/html/web/lib/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch()
+#7 /var/www/ht | IssueLog |||
+array (
+  'type' => 1,
+  'file' => '/var/www/html/web/lib/twig/twig/src/Cache/FilesystemCache.php',
+  'line' => 57,
+)
+2022-07-29 08:39:24 | Warning | 3     | Email sending failed: Some recipients were invalid, aFailedRecipients contains:  | IssueLog |||
+2022-07-29 08:39:39 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/itop-web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost/itop-web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-29 08:40:38 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/itop-web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost/itop-web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-29 08:41:38 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/itop-web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost/itop-web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-29 08:41:54 | Error   | 3     | An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "" as such route does not exist."). | Twig\Error\RuntimeError |||
+array (
+  'exception class' => 'Twig\\Error\\RuntimeError',
+  'file' => '/var/www/html/itop-web/env-production/itop-portal-base/portal/templates/bricks/manage/tile-default.html.twig',
+  'line' => 6,
+  'uri' => 'http://localhost/itop-web/pages/exec.php/?exec_module=itop-portal-base&exec_page=index.php&portal_id=itop-portal',
+)
+2022-07-31 12:10:43 | Error   | 1     | UI.php 'apply_modify' : invalid transaction_id ! data: user='admin', class='TriggerOnThresholdReached' | IssueLog |||
